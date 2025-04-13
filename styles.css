@@ -1,0 +1,168 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e6f7ff; /* Light blue background */
+    color: #4b2e2e; /* Dark brown text */
+}
+
+/* Header styles */
+header {
+    background: #007acc; /* Blue background */
+    color: #ffffff; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #005b99; /* Darker blue border */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Navigation styles */
+nav {
+    background: #005b99; /* Darker blue for navigation */
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styles */
+main {
+    max-width: 1200px; /* Limit the width of the main content */
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+}
+
+/* Grid container for sections */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Flex container for features */
+.flex-container {
+    display: flex;
+    justify-content: center; /* Center the items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Add spacing between items */
+    padding: 20px; /* Add padding around the container */
+}
+
+/* Flex item styles */
+.flex-item {
+    background: #ffffff; /* White background for better contrast */
+    border: 1px solid #dddddd; /* Light border for separation */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Add padding inside each item */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 300px; /* Set a consistent width for all items */
+    text-align: center; /* Center-align the content */
+    transition: transform 0.2s; /* Add a hover effect */
+}
+
+.flex-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Image styles for flex items */
+.flex-item img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* General styles for section images */
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Reduce the size of specific images in About Geology, Rocks of Kenya, and Geological Wonders of Kenya sections */
+#about > img, #rocks > img, #features > img {
+    max-width: 80%; /* Set a maximum width for the images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the images */
+    display: block; /* Ensure the images are block-level for centering */
+}
+
+/* Footer styles */
+footer {
+    background: #005b99;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+
+/* For small screens (mobile) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack items in a single column */
+    }
+
+    .flex-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
+/* For large screens (desktop) */
+@media (min-width: 1200px) {
+    header h1 {
+        font-size: 3em;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+    }
+
+    main {
+        padding: 40px;
+    }
+}
